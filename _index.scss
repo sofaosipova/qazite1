@@ -1,0 +1,46 @@
+@import "./blocks/navigation";
+@import "./blocks/logo";
+@import "./blocks/search";
+@import "./blocks/sign";
+
+.page-header {
+    background-color: var(--main-bg);
+    box-shadow: var(--shadow);
+    margin-bottom: 2.4rem;
+
+    @include media('tablet') {
+        margin-bottom: 2rem;
+    }
+
+    // flex-shrink: 0;
+
+    &__inner {
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        > *:not(:first-child):not(:nth-child(2)) {
+            margin-left: 15px;
+        }
+    }
+
+    &__logo {
+        margin-right: auto;
+    }
+
+    &__search-block {
+        flex-basis: 3.7rem;
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__sign-block {
+        // @include media(mobile) {
+        //     display: none;
+        // }
+    }
+}
